@@ -118,7 +118,7 @@ const App: React.FC = () => {
             </button>
             
             <div className="mt-6 text-[0.6rem] text-slate-300 font-bold uppercase tracking-widest">
-              Nadia Malik • PMS Safya Home
+              Nadia Malik • PMS Safya Homes Branch (Boys & Girls)
             </div>
           </div>
         </div>

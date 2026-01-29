@@ -49,7 +49,9 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ onStart }) => {
           <h1 className="text-lg font-black tracking-tighter uppercase text-center">
             Abacus Competition
           </h1>
-          <span className="text-[0.6rem] font-bold text-orange-200 uppercase tracking-[0.2em]">Safya Home Branch</span>
+          <span className="text-[0.55rem] font-bold text-orange-100 uppercase tracking-wide text-center px-2">
+            Safya Homes Branch (Boys & Girls)
+          </span>
         </div>
       </div>
 
@@ -69,7 +71,7 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ onStart }) => {
                 }`}
               >
                 <span className="text-[0.65rem] font-black uppercase tracking-widest">
-                  {cat === 'addition' ? 'Addition' : 'Multiply'}
+                  {cat === 'addition' ? 'Add/Sub' : 'Multiply'}
                 </span>
               </button>
             ))}
@@ -151,12 +153,12 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ onStart }) => {
           <div>
             <label className="block text-[0.65rem] font-black text-slate-400 uppercase tracking-[0.2em] mb-1.5">Rows (Operations)</label>
             <div className="flex flex-wrap gap-2">
-              {[3, 5, 7, 10, 15, 20].map(r => (
+              {[3, 5, 6, 7, 10, 15, 20].map(r => (
                 <button
                   key={r}
                   type="button"
                   onClick={() => setSettings({ ...settings, rowCount: r })}
-                  className={`flex-1 min-w-[3rem] py-2 rounded-lg font-black text-[0.65rem] border-2 transition-all ${
+                  className={`flex-1 min-w-[2.5rem] py-2 rounded-lg font-black text-[0.65rem] border-2 transition-all ${
                     settings.rowCount === r 
                       ? 'border-orange-600 text-orange-600 bg-orange-50' 
                       : 'border-slate-100 text-slate-400'
@@ -177,7 +179,7 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ onStart }) => {
           <input
             type="range"
             min="0.5"
-            max="15"
+            max="60"
             step="0.5"
             value={settings.timePerQuestion}
             onChange={(e) => setSettings({ ...settings, timePerQuestion: parseFloat(e.target.value) })}
